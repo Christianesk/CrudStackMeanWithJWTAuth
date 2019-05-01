@@ -1,0 +1,32 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col s7">
+      <h1>Register</h1>
+      <p class="lead">Already a member? Please <a routerLink="/login">log in</a> instead.</p>
+      <form (submit)="register()">
+        <div class="input-field col s12">
+          <label for="name">Full name</label>
+          <input type="text" class="form-control" name="name" placeholder="Enter your name"
+            [(ngModel)]="credentials.name">
+        </div>
+        <div class="input-field col s12">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" name="email" placeholder="Enter email"
+            [(ngModel)]="credentials.email">
+        </div>
+        <div class="input-field col s12">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" placeholder="Password"
+            [(ngModel)]="credentials.password">
+        </div>
+        <div class="card-action">
+          <div class="input-field col s12 center">
+            <button type="submit" class="btn ">register</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

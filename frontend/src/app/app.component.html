@@ -1,0 +1,13 @@
+<nav class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <div class="container">
+
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                  <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login">Sign in</a></li>
+                  <li *ngIf="!auth.isLoggedIn()"><a routerLink="/register">Register</a></li>
+                  <li *ngIf="auth.isLoggedIn()"><a routerLink="/profile">{{ auth.getUserDetails()?.name }}</a></li>
+                  <li *ngIf="auth.isLoggedIn()"><a (click)="auth.logout()">Logout</a></li>
+            </ul>
+      </div>
+</nav>
+<router-outlet></router-outlet>
